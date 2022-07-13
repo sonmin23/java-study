@@ -57,7 +57,7 @@ public class SignUpServlet extends HttpServlet {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
             pstmt.setString(2, password);
-            pstmt.execute();
+            pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
